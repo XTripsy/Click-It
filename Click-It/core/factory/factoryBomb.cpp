@@ -7,4 +7,8 @@ std::unique_ptr<box> factoryBomb::create(Vector2 pos)
 	auto bomb_uptr = std::make_unique<bomb>();
 	bomb_uptr->SetPosition(pos);
 	return bomb_uptr;
+
+	//auto bomb_decorator = std::make_unique<Tclass>(std::move(bomb_uptr));
+
+	//return bomb_decorator;
 }

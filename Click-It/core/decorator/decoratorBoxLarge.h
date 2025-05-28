@@ -1,22 +1,17 @@
-#ifndef BOMB_H
-#define BOMB_H
+#ifndef DECORATORBOXLARGE_H
+#define DECORATORBOXLARGE_H
 
+#include "decorator.h"
 #include "box.h"
 
-struct Rectangle;
-struct Color;
-
-class bomb : public box
+class decoratorBoxLarge : public decorator<box>
 {
 public:
-	bomb();
-	~bomb() = default;
+	using decorator ::decorator;
 
 public:
 	virtual void Init() override;
 	virtual void Update() override;
-
-public:
 	virtual void clicked() override;
 	virtual float GetSizeBox() const override;
 };

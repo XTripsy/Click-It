@@ -2,7 +2,7 @@
 #define FACTORYBOMB_H
 
 #include "factory.h"
-#include "box.h"5
+#include "box.h"
 
 class factoryBomb : public factory<box>
 {

@@ -2,11 +2,21 @@
 #include "factoryBomb.h"
 #include "factoryCamera.h"
 #include "raylib.h"
+#include "observerManager.h"
+#include "scoreManager.h"
+#include "soundManager.h"
+
+#include "decoratorBoxLarge.h"
 
 #include "gameManager.h"
 
 void gameManager::Init()
 {
+	observer& score = scoreManager::GetInstance();
+	observer& sound = soundManager::GetInstance();
+	observerManager::GetInstance().addObserver(&score);
+	observerManager::GetInstance().addObserver(&sound);
+
 	std::unique_ptr<factory<camera>> factory_camera_uptr = std::make_unique<factoryCamera>();
 	auto camera_uptr = factory_camera_uptr->create(Vector2(0, 0));
 	camera_uptr->Init();
@@ -14,8 +24,11 @@ void gameManager::Init()
 
 	std::unique_ptr<factory<box>> factory_box_uptr = std::make_unique<factoryBomb>();
 	auto bomb_uptr = factory_box_uptr->create(Vector2(300, 300));
+	//auto bomb_large_uptr = std::make_unique<decoratorBoxLarge>(std::move(bomb_uptr));
+	//bomb_large_uptr->Init();
 	bomb_uptr->Init();
 
+	//boxs.push_back(std::move(bomb_large_uptr));
 	boxs.push_back(std::move(bomb_uptr));
 }
 

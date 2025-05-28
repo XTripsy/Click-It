@@ -1,6 +1,7 @@
 #include "raylib.h"
 #include "gameManager.h"
 #include "inputManager.h"
+#include "scoreManager.h"
 
 #include "Engine.h"
 
@@ -22,17 +23,21 @@ void Engine::Update()
 {
 	gameManager& game_manager = gameManager::GetInstance();
 	inputManager& input_manager = inputManager::GetInstance();
+	scoreManager& score_manager = scoreManager::GetInstance();
+
+	Camera2D camera = game_manager.GetCamera();
 
 	while (!WindowShouldClose())
 	{
 	#pragma region BeginRender
 		BeginDrawing();
-		BeginMode2D(game_manager.GetCamera());
+		BeginMode2D(camera);
 		ClearBackground(BLACK);
 	#pragma endregion
 
 		input_manager.Update();
 		game_manager.Update();
+		score_manager.Update();
 
 	#pragma region EndRender
 		EndMode2D();

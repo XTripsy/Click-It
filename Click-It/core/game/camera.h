@@ -12,7 +12,6 @@ public:
 	~camera() = default;
 
 public:
-	//void Init();
 	virtual void Init() override;
 	virtual void Update() override;
 	Camera2D GetCamera();

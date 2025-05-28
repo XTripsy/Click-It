@@ -1,6 +1,12 @@
 #include "box.h"
 
+box::box()
+{
+	size_box = 10;
+}
+
 Vector2 box::GetCenterPosition()
 {
-	return Vector2(GetPosition().x - (size_box.x / 2), GetPosition().y - (size_box.y / 2));
+	float size = size_box / 2;
+	return Vector2(GetPosition().x - size, GetPosition().y - size);
 }

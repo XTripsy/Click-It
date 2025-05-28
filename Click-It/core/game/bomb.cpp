@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string>
+#include "observerManager.h"
 
 #include "bomb.h"
 
 bomb::bomb()
 {
-	size_box = Vector2(40, 40);
-	bomb_box = { 0, 0, size_box.x, size_box.y };
+	//size_box = 40;
+	bomb_box = { 0, 0, size_box, size_box };
 	color_box = RED;
 }
 
@@ -27,9 +28,15 @@ void bomb::clicked()
 {
 	if (!CheckCollisionPointRec(GetMousePosition(), bomb_box)) return;
 
-	size_box.x -= 10;
-	size_box.y -= 10;
-	bomb_box = { GetCenterPosition().x, GetCenterPosition().y, size_box.x, size_box.y };
+	observerManager::GetInstance().notifyObserver("bomb");
+
+	size_box -= 10;
+	bomb_box = { GetCenterPosition().x, GetCenterPosition().y, size_box, size_box };
 
 	//color_box = RAYWHITE;
+}
+
+float bomb::GetSizeBox() const
+{
+	return size_box;
 }

@@ -6,19 +6,20 @@
 class box : public object
 {
 protected:
-	box() = default;
+	box();
 
 public:
 	virtual ~box() = default;
 
 public:
 	virtual void clicked() = 0;
+	virtual float GetSizeBox() const = 0;
 
 public:
 	Vector2 GetCenterPosition();
 
 public:
-	Vector2 size_box;
+	float size_box;
 	Rectangle bomb_box;
 	Color color_box;
 };
