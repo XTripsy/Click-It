@@ -14,13 +14,11 @@ public:
 public:
 	virtual void Init() = 0;
 	virtual void Update() = 0;
+	virtual void SetPosition(Vector2 pos) = 0;
+	virtual Vector2 GetPosition() = 0;
+	virtual void SetIsDestroy(bool value) = 0;
+	virtual bool GetIsDestroy() = 0;
 
-public:
-	void SetPosition(Vector2 pos);
-	Vector2 GetPosition();
-
-private:
-	Vector2 position;
 };
 
 #endif

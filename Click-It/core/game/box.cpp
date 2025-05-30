@@ -1,12 +1,32 @@
+#include <iostream>
 #include "box.h"
 
-box::box()
+void box::Init()
 {
-	size_box = 10;
+
 }
 
-Vector2 box::GetCenterPosition()
+void box::Update()
 {
-	float size = size_box / 2;
-	return Vector2(GetPosition().x - size, GetPosition().y - size);
+
+}
+
+void box::SetPosition(Vector2 pos)
+{
+	position = pos;
+}
+
+Vector2 box::GetPosition()
+{
+	return position;
+}
+
+void box::SetIsDestroy(bool value)
+{
+	isDestroy = value;
+}
+
+bool box::GetIsDestroy()
+{
+	return isDestroy;
 }

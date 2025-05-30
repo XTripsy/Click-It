@@ -18,6 +18,26 @@ void camera::Update()
 
 }
 
+void camera::SetPosition(Vector2 pos)
+{
+	position = pos;
+}
+
+Vector2 camera::GetPosition()
+{
+	return position;
+}
+
+void camera::SetIsDestroy(bool value)
+{
+	isDestroy = value;
+}
+
+bool camera::GetIsDestroy()
+{
+	return isDestroy;
+}
+
 Camera2D camera::GetCamera()
 {
 	return main_camera;

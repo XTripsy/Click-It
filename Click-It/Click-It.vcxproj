@@ -77,7 +77,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(projectDir)core/observer;$(projectDir)core/decorator;$(projectDir)core/factory;$(projectDir)core/game;$(projectDir)core;$(ProjectDir)core/pattern;$(ProjectDir)core/singleton;C:\NativeProject\Click-It\Click-It\libraries\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(projectDir)core/game/level;$(projectDir)core/game/box;$(projectDir)core/observer;$(projectDir)core/decorator;$(projectDir)core/factory;$(projectDir)core/game;$(projectDir)core;$(ProjectDir)core/pattern;$(ProjectDir)core/singleton;C:\NativeProject\Click-It\Click-It\libraries\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -109,7 +109,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(projectDir)core/observer;$(projectDir)core/decorator;$(projectDir)core/factory;$(projectDir)core/game;$(projectDir)core;$(ProjectDir)core/pattern;$(ProjectDir)core/singleton;C:\NativeProject\Click-It\Click-It\libraries\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(projectDir)core/game/level;$(projectDir)core/game/box;$(projectDir)core/observer;$(projectDir)core/decorator;$(projectDir)core/factory;$(projectDir)core/game;$(projectDir)core;$(ProjectDir)core/pattern;$(ProjectDir)core/singleton;C:\NativeProject\Click-It\Click-It\libraries\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,46 +136,64 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Click-It.cpp" />
+    <ClCompile Include="core\decorator\decoratorBombBox.cpp" />
     <ClCompile Include="core\decorator\decoratorBoxLarge.cpp" />
     <ClCompile Include="core\decorator\decoratorBoxMedium.cpp" />
     <ClCompile Include="core\decorator\decoratorBoxSmall.cpp" />
+    <ClCompile Include="core\decorator\decoratorSafeBox.cpp" />
     <ClCompile Include="core\Engine.cpp" />
-    <ClCompile Include="core\factory\factoryBomb.cpp" />
+    <ClCompile Include="core\factory\factoryBox.cpp" />
     <ClCompile Include="core\factory\factoryCamera.cpp" />
-    <ClCompile Include="core\game\bomb.cpp" />
     <ClCompile Include="core\game\box.cpp" />
+    <ClCompile Include="core\game\box\baseBox.cpp" />
     <ClCompile Include="core\game\camera.cpp" />
+    <ClCompile Include="core\game\level.cpp" />
+    <ClCompile Include="core\game\level\levelLoop.cpp" />
+    <ClCompile Include="core\game\level\levelOne.cpp" />
+    <ClCompile Include="core\game\level\levelThree.cpp" />
+    <ClCompile Include="core\game\level\levelTwo.cpp" />
     <ClCompile Include="core\game\object.cpp" />
     <ClCompile Include="core\pattern\decorator.cpp" />
     <ClCompile Include="core\pattern\factory.cpp" />
     <ClCompile Include="core\pattern\observer.cpp" />
     <ClCompile Include="core\pattern\singleton.cpp" />
     <ClCompile Include="core\singleton\gameManager.cpp" />
+    <ClCompile Include="core\singleton\healthManager.cpp" />
     <ClCompile Include="core\singleton\inputManager.cpp" />
     <ClCompile Include="core\singleton\observerManager.cpp" />
     <ClCompile Include="core\singleton\scoreManager.cpp" />
     <ClCompile Include="core\singleton\soundManager.cpp" />
+    <ClCompile Include="core\singleton\timeManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="core\decorator\decoratorBombBox.h" />
     <ClInclude Include="core\decorator\decoratorBoxLarge.h" />
     <ClInclude Include="core\decorator\decoratorBoxMedium.h" />
     <ClInclude Include="core\decorator\decoratorBoxSmall.h" />
+    <ClInclude Include="core\decorator\decoratorSafeBox.h" />
     <ClInclude Include="core\Engine.h" />
-    <ClInclude Include="core\factory\factoryBomb.h" />
+    <ClInclude Include="core\factory\factoryBox.h" />
     <ClInclude Include="core\factory\factoryCamera.h" />
-    <ClInclude Include="core\game\bomb.h" />
     <ClInclude Include="core\game\box.h" />
+    <ClInclude Include="core\game\box\baseBox.h" />
     <ClInclude Include="core\game\camera.h" />
+    <ClInclude Include="core\game\level.h" />
+    <ClInclude Include="core\game\level\levelLoop.h" />
+    <ClInclude Include="core\game\level\levelOne.h" />
+    <ClInclude Include="core\game\level\levelThree.h" />
+    <ClInclude Include="core\game\level\levelTwo.h" />
     <ClInclude Include="core\game\object.h" />
     <ClInclude Include="core\pattern\decorator.h" />
     <ClInclude Include="core\pattern\factory.h" />
     <ClInclude Include="core\pattern\observer.h" />
     <ClInclude Include="core\pattern\singleton.h" />
     <ClInclude Include="core\singleton\gameManager.h" />
+    <ClInclude Include="core\singleton\healthManager.h" />
     <ClInclude Include="core\singleton\inputManager.h" />
     <ClInclude Include="core\singleton\observerManager.h" />
     <ClInclude Include="core\singleton\scoreManager.h" />
     <ClInclude Include="core\singleton\soundManager.h" />
+    <ClInclude Include="core\singleton\timeManager.h" />
     <ClInclude Include="libraries\include\raylib.h" />
     <ClInclude Include="libraries\include\raymath.h" />
     <ClInclude Include="libraries\include\rlgl.h" />

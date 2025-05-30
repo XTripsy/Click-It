@@ -1,9 +1,9 @@
-#ifndef DECORATORBOXMEDIUM_H
-#define DECORATORBOXMEDIUM_H
+#ifndef DECORATORBOMBBOX
+#define DECORATORBOMBBOX
 
 #include "decorator.h"
 
-class decoratorBoxMedium : public decorator<box>
+class decoratorBombBox : public decorator<box>
 {
 public:
 	using decorator<box>::decorator;

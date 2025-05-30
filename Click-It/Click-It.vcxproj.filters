@@ -39,12 +39,6 @@
     <ClCompile Include="core\game\box.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="core\game\bomb.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="core\factory\factoryBomb.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="core\factory\factoryCamera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -73,6 +67,39 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="core\singleton\soundManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\decorator\decoratorBombBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\factory\factoryBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\decorator\decoratorSafeBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\singleton\healthManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\singleton\timeManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\game\level.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\game\level\levelOne.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\game\level\levelTwo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\game\box\baseBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\game\level\levelThree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="core\game\level\levelLoop.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -107,12 +134,6 @@
     <ClInclude Include="core\game\box.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="core\game\bomb.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="core\factory\factoryBomb.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="core\factory\factoryCamera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -141,6 +162,39 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="core\singleton\soundManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\decorator\decoratorBombBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\factory\factoryBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\decorator\decoratorSafeBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\singleton\healthManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\singleton\timeManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\game\level.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\game\level\levelOne.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\game\level\levelTwo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\game\box\baseBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\game\level\levelThree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="core\game\level\levelLoop.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

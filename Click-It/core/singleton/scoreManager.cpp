@@ -20,11 +20,10 @@ void scoreManager::Shutdown()
 
 void scoreManager::onNotify(const std::string& notif)
 {
-	if (notif == "bomb") bombNotif();
+	if (notif == "safeBox") score += 1;
 }
 
-void scoreManager::bombNotif()
+float scoreManager::GetScore()
 {
-	std::cout << "bomb" << std::endl;
-	score -= 1;
+	return score;
 }

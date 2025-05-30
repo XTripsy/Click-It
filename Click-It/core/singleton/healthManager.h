@@ -1,14 +1,14 @@
-#ifndef SCOREMANAGER_H
-#define SCOREMANAGER_H
+#ifndef HEALTHMANAGER_H
+#define HEALTHMANAGER_H
 
 #include "singleton.h"
 #include "observer.h"
 
-class scoreManager : public singleton<scoreManager>, public observer
+class healthManager : public singleton<healthManager>, public observer
 {
 public:
-	scoreManager() = default;
-	~scoreManager() = default;
+	healthManager() = default;
+	~healthManager() = default;
 
 public:
 	virtual void Init() override;
@@ -16,11 +16,8 @@ public:
 	virtual void Shutdown() override;
 	virtual void onNotify(const std::string& notif) override;
 
-public:
-	float GetScore();
-
 private:
-	float score;
+	float health;
 };
 
 #endif

@@ -5,7 +5,7 @@
 #include <memory>
 #include <vector>
 #include "camera.h"
-#include "bomb.h"
+#include "level.h"
 
 struct Camera2D;
 struct Vector2;
@@ -25,15 +25,22 @@ public:
 	void SetSizeWindow(Vector2 size);
 	Vector2 GetSizeWindow();
 
+	void AddIndexLevel();
+	int GetIndexLevel();
+
+	void ResetLevel();
+
 	Camera2D GetCamera();
 
 	void CheckCollisionObject();
 
 private:
+	int indexLevel;
 	Vector2 sizeWindow;
 
 	std::unique_ptr<camera> main_camera;
-	std::vector<std::unique_ptr<box>> boxs;
+	std::unique_ptr<level> level_loop;
+	std::vector<std::unique_ptr<level>> levels;
 };
 
 #endif

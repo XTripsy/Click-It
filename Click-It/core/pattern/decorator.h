@@ -1,7 +1,9 @@
 #ifndef DECORATOR_H
 #define DECORATOR_H
 
+#include <iostream>
 #include <memory>
+#include "box.h"
 
 template<typename Tclass>
 class decorator : public Tclass
