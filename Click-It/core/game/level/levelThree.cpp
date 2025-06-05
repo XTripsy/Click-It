@@ -72,7 +72,6 @@ void levelThree::Click()
 
 	if (scoreManager::GetInstance().GetScore() == 8)
 	{
-		gameManager::GetInstance().AddIndexLevel();
 		timeManager::GetInstance().AddTime();
 	}
 }

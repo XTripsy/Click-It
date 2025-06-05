@@ -6,6 +6,10 @@
 class decoratorBoxLarge : public decorator<box>
 {
 public:
+	decoratorBoxLarge() = default;
+	virtual ~decoratorBoxLarge() = default;
+
+public:
 	using decorator<box>::decorator;
 
 public:

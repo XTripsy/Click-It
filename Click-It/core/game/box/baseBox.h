@@ -6,6 +6,10 @@
 class baseBox : public box
 {
 public:
+	baseBox() = default;
+	virtual ~baseBox() = default;
+
+public:
 	virtual void Init() override;
 	virtual void Update() override;
 

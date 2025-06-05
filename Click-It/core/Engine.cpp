@@ -36,7 +36,7 @@ void Engine::Update()
 
 	Camera2D camera = game_manager.GetCamera();
 
-	while (!WindowShouldClose())
+	while (!WindowShouldClose() && !game_manager.GetConditionWindow())
 	{
 	#pragma region BeginRender
 		BeginDrawing();
@@ -61,6 +61,5 @@ void Engine::Update()
 
 void Engine::Shutdown()
 {
-	gameManager::GetInstance().Shutdown();
-	CloseWindow();
+	
 }

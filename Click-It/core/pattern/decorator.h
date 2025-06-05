@@ -10,7 +10,7 @@ class decorator : public Tclass
 {
 public:
 	decorator(std::unique_ptr<Tclass> class_) : base(std::move(class_)) {}
-	~decorator() = default;
+	virtual ~decorator() = default;
 
 protected:
 	std::unique_ptr<Tclass> base;

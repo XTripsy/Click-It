@@ -6,6 +6,10 @@
 class decoratorBoxMedium : public decorator<box>
 {
 public:
+	decoratorBoxMedium() = default;
+	virtual ~decoratorBoxMedium() = default;
+
+public:
 	using decorator<box>::decorator;
 
 public:

@@ -9,6 +9,8 @@ void decoratorSafeBox::Init()
 
 void decoratorSafeBox::Update()
 {
+	if (!base || base->GetIsDestroy()) return;
+
 	DrawRectangleRec(GetRectangleBox(), GetColorBox());
 }
 

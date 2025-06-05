@@ -5,17 +5,20 @@
 
 void level::Update()
 {
-	for (auto& var : boxs)
-	{
-		var->Update();
-	}
+    if (boxs.empty()) return;
 
-	boxs.erase(
-		std::remove_if(boxs.begin(), boxs.end(),
-			[](const std::unique_ptr<box>& obj) 
-			{
-				return obj->GetIsDestroy();
-			}),
-		boxs.end()
-	);
+    for (auto& var : boxs)
+    {
+        if (!var->GetIsDestroy())
+            var->Update();
+    }
+
+    boxs.erase(
+        std::remove_if(boxs.begin(), boxs.end(),
+            [](const std::unique_ptr<box>& obj)
+            {
+                return obj->GetIsDestroy();
+            }),
+        boxs.end()
+    );
 }

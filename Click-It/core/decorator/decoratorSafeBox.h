@@ -6,6 +6,10 @@
 class decoratorSafeBox : public decorator<box>
 {
 public:
+	decoratorSafeBox() = default;
+	virtual ~decoratorSafeBox() = default;
+
+public:
 	using decorator<box>::decorator;
 
 public:

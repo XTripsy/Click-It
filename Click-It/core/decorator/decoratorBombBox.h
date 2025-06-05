@@ -6,6 +6,10 @@
 class decoratorBombBox : public decorator<box>
 {
 public:
+	decoratorBombBox() = default;
+	virtual ~decoratorBombBox() = default;
+
+public:
 	using decorator<box>::decorator;
 
 public:

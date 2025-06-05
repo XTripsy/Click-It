@@ -10,6 +10,8 @@ void decoratorBombBox::Init()
 
 void decoratorBombBox::Update()
 {
+	if (!base || base->GetIsDestroy()) return;
+
 	DrawRectangleRec(GetRectangleBox(), GetColorBox());
 }
 

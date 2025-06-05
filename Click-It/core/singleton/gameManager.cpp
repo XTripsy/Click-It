@@ -31,20 +31,10 @@ void gameManager::Init()
 
 	level_loop = std::make_unique<levelLoop>();
 	level_loop->Init();
-
-	/*std::unique_ptr<level> level = std::make_unique<levelOne>();
-	levels.push_back(std::move(level));
-	level = std::make_unique<levelTwo>();
-	levels.push_back(std::move(level));
-	level = std::make_unique<levelThree>();
-	levels.push_back(std::move(level));
-
-	levels[GetIndexLevel()]->Init();*/
 }
 
 void gameManager::Update()
 {
-	//levels[GetIndexLevel()]->Update();
 	level_loop->Update();
 }
 
@@ -63,17 +53,6 @@ Vector2 gameManager::GetSizeWindow()
 	return sizeWindow;
 }
 
-void gameManager::AddIndexLevel()
-{
-	indexLevel++;
-	//levels[GetIndexLevel()]->Init();
-}
-
-int gameManager::GetIndexLevel()
-{
-	return indexLevel;
-}
-
 void gameManager::ResetLevel()
 {
 	level_loop->Init();
@@ -86,6 +65,15 @@ Camera2D gameManager::GetCamera()
 
 void gameManager::CheckCollisionObject()
 {
-	//levels[GetIndexLevel()]->Click();
 	level_loop->Click();
+}
+
+void gameManager::SetConditionWindow(bool value)
+{
+	bIsWindowClose = value;
+}
+
+bool gameManager::GetConditionWindow()
+{
+	return bIsWindowClose;
 }

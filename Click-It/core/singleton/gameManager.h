@@ -25,17 +25,17 @@ public:
 	void SetSizeWindow(Vector2 size);
 	Vector2 GetSizeWindow();
 
-	void AddIndexLevel();
-	int GetIndexLevel();
-
 	void ResetLevel();
 
 	Camera2D GetCamera();
 
 	void CheckCollisionObject();
 
+	void SetConditionWindow(bool value);
+	bool GetConditionWindow();
+
 private:
-	int indexLevel;
+	bool bIsWindowClose;
 	Vector2 sizeWindow;
 
 	std::unique_ptr<camera> main_camera;

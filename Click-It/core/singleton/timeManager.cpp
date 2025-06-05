@@ -1,5 +1,6 @@
 #include "raylib.h"
 #include <string>
+#include "gameManager.h"
 
 #include "timeManager.h"
 
@@ -20,7 +21,7 @@ void timeManager::Update()
 	DrawText(TextFormat(std::to_string((int)time).c_str()), 580, 0, 20, BLUE);
 
     if (time < 0)
-        CloseWindow();
+        gameManager::GetInstance().SetConditionWindow(true);
 }
 
 void timeManager::Shutdown()

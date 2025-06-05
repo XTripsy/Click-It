@@ -25,6 +25,8 @@ void inputManager::Update()
             if (bIsKeyReleased(key)) InvokeBinding(binding, InputEventType::Release);
         }
     }
+
+    // oioioi
 }
 
 void inputManager::Shutdown()

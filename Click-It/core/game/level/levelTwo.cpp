@@ -67,7 +67,6 @@ void levelTwo::Click()
 
 	if (scoreManager::GetInstance().GetScore() == 5)
 	{
-		gameManager::GetInstance().AddIndexLevel();
 		timeManager::GetInstance().AddTime();
 	}
 }
